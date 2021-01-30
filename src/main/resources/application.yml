@@ -1,13 +1,9 @@
 spring:
   application:
     name: openFeign-client
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server-00.local:30000/eureka/,http://eureka-server-01.local:30001/eureka/
-  instance:
-    instance-id: openFeign-client
-    prefer-ip-address: true
+  cloud:
+    zookeeper:
+      connect-string: zoo1.local:2181,zoo2.local:2182,zoo3.local:2183
 ---
 server:
   port: 36000
