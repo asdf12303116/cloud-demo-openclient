@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: openFeign-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-00.local:30000/eureka/,http://eureka-server-01.local:30001/eureka/
+  instance:
+    instance-id: openFeign-client
+    prefer-ip-address: true
+---
+server:
+  port: 36000
